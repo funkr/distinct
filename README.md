@@ -19,3 +19,13 @@ Bash does not optimize a sequence like this, and this pattern occures quite ofte
     cat .\testdata\duplicates.txt | .\bin\release\netcoreapp3.1\win-x64\distinct.exe
 
     .\bin\release\netcoreapp3.1\win-x64\distinct.exe --file .\testdata\duplicates.txt
+    
+## Usage
+    
+    USAGE: distinct.exe [--help] [--file <name>] [--version]
+
+    OPTIONS:
+
+        --file <name>         Path and filename of the file which should be processed.
+        --version             Prints out the version and exits.
+        --help                display this list of options.
