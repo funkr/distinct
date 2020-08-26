@@ -28,4 +28,4 @@ Bash does not optimize a sequence like this, and this pattern occures quite ofte
 
         --file <name>         Path and filename of the file which should be processed.
         --version             Prints out the version and exits.
-        --help                display this list of options.
+        --help                Display this list of options.
