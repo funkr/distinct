@@ -13,7 +13,7 @@ commands often buried under a load of trivial commands like `ls`, and finally th
     ls- l
     history
     
-Bash does not optimize a sequence like this, and this pattern occures quite often. I put this command into my starting batch file which I user every morning. I start with a declutterd brain.
+Bash does not optimize a sequence like this, and this pattern occures quite often. I put this command into my starting batch file which I use every morning. I start with a declutterd brain.
 
 ## Examples
     cat .\testdata\duplicates.txt | .\bin\release\netcoreapp3.1\win-x64\distinct.exe
