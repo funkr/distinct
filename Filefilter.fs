@@ -11,7 +11,7 @@ let fFilter fileName trim =
 
     let cleanHistory =
         if trim
-        then List.map (fun x -> (x + "").Trim()) cleanHistory
+        then cleanHistory |> List.map (fun x -> x.Trim())
         else cleanHistory
 
     System.IO.File.WriteAllLines(fileName, cleanHistory)
