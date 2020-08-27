@@ -26,6 +26,7 @@ Bash does not optimize a sequence like this, and this pattern occures quite ofte
 
     OPTIONS:
 
-        --file <name>         Path and filename of the file which should be processed.
-        --version             Prints out the version and exits.
-        --help                Display this list of options.
+        --file <name>         path and filename of the file which should be processed.
+        --trim                trim leading or trailing whitespaces of the lines.
+        --version             prints out the version and exits.
+        --help                display this list of options.
