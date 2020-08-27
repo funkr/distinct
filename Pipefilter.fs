@@ -11,7 +11,7 @@ let distinct =
 
 exception EndOfSequenceException
 
-let pFilter =
+let pFilter trim =
     let filterIndenticalLines = distinct
 
     let inputSeq =
@@ -23,5 +23,7 @@ let pFilter =
 
             let uniqueLine = filterIndenticalLines line
 
-            if uniqueLine.IsSome then printfn "%s" uniqueLine.Value
+            if uniqueLine.IsSome
+            then if trim then uniqueLine.Value |> printfn "%s" else uniqueLine.Value.Trim() |> printfn "%s"
+
     with EndOfSequenceException -> stdout.Flush()

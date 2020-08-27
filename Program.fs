@@ -9,6 +9,7 @@ open Filefilter
 
 type CLIArguments =
     | File of name: string
+    | Trim
     | Version
 
 
@@ -16,6 +17,7 @@ type CLIArguments =
         member s.Usage =
             match s with
             | File _ -> "path and filename of the file which should be processed."
+            | Trim _ -> "trim leading or trailing whitespaces of the lines."
             | Version _ -> "prints out the version and exits."
 
 
@@ -39,13 +41,14 @@ let main argv =
     let results = parser.ParseCommandLine argv
     let inputFile = results.GetResults File
     let version = results.Contains Version
+    let trim = results.Contains Trim
 
     if version then
         printfn "This is distinct V0.1a"
     elif inputFile.IsEmpty then
-        pFilter
+        pFilter trim
     else
         for f in inputFile do
-            fFilter f
+            fFilter f trim
 
     0 // return an integer exit code
