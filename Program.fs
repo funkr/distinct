@@ -15,8 +15,8 @@ type CLIArguments =
     interface IArgParserTemplate with
         member s.Usage =
             match s with
-            | File _ -> "Path and filename of the file which should be processed."
-            | Version _ -> "Prints out the version and exits."
+            | File _ -> "path and filename of the file which should be processed."
+            | Version _ -> "prints out the version and exits."
 
 
 [<EntryPoint>]
