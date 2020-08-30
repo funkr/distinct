@@ -1,5 +1,7 @@
-ls a
-ls b
-ls c
-ls b
-ls c
+ ls a
+ ls b
+   ls c
+  ls a
+ ls b 
+ls c 
+ls b 

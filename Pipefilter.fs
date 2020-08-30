@@ -21,9 +21,15 @@ let pFilter trim =
         for line in inputSeq do
             if isNull line then raise (EndOfSequenceException)
 
+            let line =
+                match trim with
+                | true -> line.Trim()
+                | false -> line
+
             let uniqueLine = filterIndenticalLines line
 
-            if uniqueLine.IsSome
-            then if trim then uniqueLine.Value |> printfn "%s" else uniqueLine.Value.Trim() |> printfn "%s"
+            match uniqueLine with
+            | Some x -> printfn "%s" x
+            | None -> printf ""
 
     with EndOfSequenceException -> stdout.Flush()
