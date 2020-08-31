@@ -1,6 +1,6 @@
 # distinct
-A simple commandline tool to remove duplicate lines in a text file. Its a further development of the bash `uniq` command, 
-`uniq` just removes consecutive lines but `distinct` remove every double entry.
+A simple commandline tool to remove duplicate lines in a text file. Its a further development of the bash `uniq` command. 
+The `uniq` command just removes consecutive lines but `distinct` remove every double entry.
 
 This is my first try in F#. Any comments are welcome. 
 
