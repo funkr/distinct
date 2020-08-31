@@ -6,13 +6,8 @@ let fFilter fileName trim =
     let bashHistory =
         System.IO.File.ReadAllLines fileName
         |> Array.toList
+        |> List.map (fun x -> if trim then x.Trim() else x)
+        |> List.distinct
 
-    let cleanHistory: List<string> = List.distinct bashHistory
-
-    let cleanHistory =
-        if trim
-        then cleanHistory |> List.map (fun x -> x.Trim())
-        else cleanHistory
-
-    System.IO.File.WriteAllLines(fileName, cleanHistory)
+    System.IO.File.WriteAllLines(fileName, bashHistory)
     System.IO.File.Delete(fileName + ".in")
