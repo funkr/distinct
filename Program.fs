@@ -44,7 +44,7 @@ let main argv =
     let trim = results.Contains Trim
 
     if version then
-        printfn "This is distinct V0.1"
+        printfn "This is distinct V0.2"
     elif inputFile.IsEmpty then
         pFilter trim
     else
